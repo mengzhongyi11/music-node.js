@@ -1,7 +1,6 @@
 
 module.exports = {
-    jwtsSecreKey: 'Music ^_^',
-    //有效期
-    expiresIn: '1000h'
+    jwtsSecreKey: process.env.JWT_SECRET,
+    expiresIn: process.env.JWT_EXPIRES || '1000h'
 }
 

@@ -105,8 +105,8 @@ router.post('/Login_wei', async (req, res) => {
             `https://api.weixin.qq.com/sns/jscode2session`,
             {
                 params: {
-                    appid: 'wxfe0cbc112f44df3f',
-                    secret: 'a12e18eba669d3ff404b529c33180db5',
+                    appid: process.env.WX_APPID,
+                    secret: process.env.WX_SECRET,
                     js_code: code,
                     grant_type: 'authorization_code'
                 }

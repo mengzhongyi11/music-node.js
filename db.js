@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const AutoIncrement = require('mongoose-sequence')(mongoose);
 
-mongoose.connect("mongodb://localhost:27017/songList")
+mongoose.connect(process.env.MONGO_URI || "mongodb://localhost:27017/songList")
     .then(() => {
         console.log('成功')
     })
